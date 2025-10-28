@@ -32,10 +32,18 @@ def step_show_success_message(context):
 def step_profile_updated(context):
     print("Perubahan profil terlihat di halaman profil pengguna.")
 
-@then("Sistem menampilkan pesan error bahwa data harus diisi dengan benar")
+@then("Sistem menampilkan pesan error bahwa data harus diisi dengan valid")
 def step_show_error_message(context):
     print("Pesan error muncul: data wajib belum diisi dengan benar.")
 
 @then("Data profil tidak berubah")
 def step_profile_not_changed(context):
     print("Profil tidak berubah karena data tidak valid.")
+
+@when('Pengguna mengubah field Nama, Email, dan Foto Profil dengan data dengan valid')
+def step_impl(context):
+    print("Pengguna mengubah data profil dengan data valid.")
+
+@when('Pengguna menekan tombol "Save Profile"')
+def step_impl(context):
+    print('Pengguna menekan tombol "Save Profile".')

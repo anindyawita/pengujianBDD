@@ -9,7 +9,7 @@ Feature: Edit Profile Pengguna ELPT UNAIR
 
   Scenario: Pengguna berhasil memperbarui profil dengan data valid
     When Pengguna membuka menu "Edit Profile"
-    And Pengguna mengubah field Nama, Email, dan Foto Profil dengan data yang benar
+    And Pengguna mengubah field Nama, Email, dan Foto Profil dengan data dengan valid
     And Pengguna menekan tombol "Save"
     Then Sistem menampilkan notifikasi "Profile berhasil diperbarui"
     And Perubahan data langsung terlihat di halaman profil pengguna
@@ -18,5 +18,5 @@ Feature: Edit Profile Pengguna ELPT UNAIR
     When Pengguna membuka menu "Edit Profile"
     And Pengguna mengosongkan field wajib seperti Nama atau Email
     And Pengguna menekan tombol "Save Profile"
-    Then Sistem menampilkan pesan error bahwa data harus diisi dengan benar
+    Then Sistem menampilkan pesan error bahwa data harus diisi dengan valid
     And Data profil tidak berubah
